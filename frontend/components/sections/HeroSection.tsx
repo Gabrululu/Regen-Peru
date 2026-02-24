@@ -55,7 +55,7 @@ export function HeroSection() {
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center max-w-5xl mx-auto pt-20 pb-32">
                 {/* Badge */}
                 <div ref={badgeRef} className="mb-6 animate-fade-in-up">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider text-primary">
+                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md border border-primary/40 text-xs font-semibold uppercase tracking-wider text-primary shadow-lg shadow-primary/20">
                         <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                         Únete a la causa
                     </span>
@@ -84,7 +84,7 @@ export function HeroSection() {
                 <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center gap-4">
                     <Link
                         href="/voluntariado"
-                        className="group relative flex h-14 items-center justify-center overflow-hidden rounded-full bg-primary px-8 text-background-dark font-bold text-base transition-all duration-300 hover:bg-[#15c550] hover:scale-105 active:scale-95"
+                        className="group relative flex h-14 items-center justify-center overflow-hidden rounded-full bg-primary px-8 text-white font-bold text-base transition-all duration-300 hover:bg-[#15c550] hover:scale-105 active:scale-95 shadow-xl shadow-primary/30"
                     >
                         <span className="relative z-10 mr-2">Únete como Voluntario</span>
                         <ArrowRight className="relative z-10 w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -101,44 +101,44 @@ export function HeroSection() {
             </div>
 
             {/* Bottom Stats / Social Proof */}
-            <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-black/20 backdrop-blur-md">
+            <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/20 bg-black/40 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
                     {/* Stat 1 */}
                     <div className="flex items-center gap-4">
-                        <div className="p-2 rounded-full bg-white/5 border border-white/10 text-primary">
+                        <div className="p-3 rounded-full bg-primary/20 border border-primary/30 text-primary">
                             <Sprout className="w-6 h-6" />
                         </div>
                         <div>
-                            <p className="text-white text-2xl font-bold leading-none">500+</p>
-                            <p className="text-white/60 text-xs uppercase tracking-wide">Árboles Plantados</p>
+                            <p className="text-white text-2xl font-bold leading-none drop-shadow-lg">500+</p>
+                            <p className="text-white/80 text-xs uppercase tracking-wide font-medium">Árboles Plantados</p>
                         </div>
                     </div>
 
                     {/* Divider */}
-                    <div className="hidden md:flex h-8 w-px bg-white/10" />
+                    <div className="hidden md:flex h-8 w-px bg-white/20" />
 
                     {/* Stat 2 */}
                     <div className="flex items-center gap-4">
-                        <div className="p-2 rounded-full bg-white/5 border border-white/10 text-primary">
+                        <div className="p-3 rounded-full bg-primary/20 border border-primary/30 text-primary">
                             <Users className="w-6 h-6" />
                         </div>
                         <div>
-                            <p className="text-white text-2xl font-bold leading-none">127</p>
-                            <p className="text-white/60 text-xs uppercase tracking-wide">Voluntarios Activos</p>
+                            <p className="text-white text-2xl font-bold leading-none drop-shadow-lg">127</p>
+                            <p className="text-white/80 text-xs uppercase tracking-wide font-medium">Voluntarios Activos</p>
                         </div>
                     </div>
 
                     {/* Divider */}
-                    <div className="hidden md:flex h-8 w-px bg-white/10" />
+                    <div className="hidden md:flex h-8 w-px bg-white/20" />
 
                     {/* Stat 3 */}
                     <div className="flex items-center gap-4">
-                        <div className="p-2 rounded-full bg-white/5 border border-white/10 text-primary">
+                        <div className="p-3 rounded-full bg-primary/20 border border-primary/30 text-primary">
                             <Vote className="w-6 h-6" />
                         </div>
                         <div>
-                            <p className="text-white text-2xl font-bold leading-none">8</p>
-                            <p className="text-white/60 text-xs uppercase tracking-wide">Propuestas Activas</p>
+                            <p className="text-white text-2xl font-bold leading-none drop-shadow-lg">8</p>
+                            <p className="text-white/80 text-xs uppercase tracking-wide font-medium">Propuestas Activas</p>
                         </div>
                     </div>
                 </div>
