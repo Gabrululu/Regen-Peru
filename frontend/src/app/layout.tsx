@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Regen Peru DAO" }],
   creator: "Regen Peru DAO",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Regen Peru DAO 🌿",
     description: "Únete a la primera DAO de impacto social en Perú. Tu voz decide qué proyectos financiamos.",
