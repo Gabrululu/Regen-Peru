@@ -55,10 +55,10 @@ export function HeroSection() {
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center max-w-5xl mx-auto pt-20 pb-32">
                 {/* Badge */}
                 <div ref={badgeRef} className="mb-6 animate-fade-in-up">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md border border-primary/40 text-xs font-semibold uppercase tracking-wider text-primary shadow-lg shadow-primary/20">
-                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse text-white" />
-                        Únete a la causa
-                    </span>
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md border border-primary/40 text-xs font-semibold uppercase tracking-wider text-white shadow-lg shadow-primary/20">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                Únete a la causa
+                </span>
                 </div>
 
                 {/* Main Heading */}
