@@ -56,7 +56,7 @@ export function HeroSection() {
                 {/* Badge */}
                 <div ref={badgeRef} className="mb-6 animate-fade-in-up">
                     <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md border border-primary/40 text-xs font-semibold uppercase tracking-wider text-primary shadow-lg shadow-primary/20">
-                        <span className=""w-2 h-2 rounded-full bg-primary animate-pulse text-white"" />
+                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse text-white" />
                         Únete a la causa
                     </span>
                 </div>
