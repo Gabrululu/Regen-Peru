@@ -44,12 +44,13 @@ export default function ImpactDashboard() {
 
     if (!isConnected) {
         return (
-            <div className="min-h-screen pt-24 pb-12 flex flex-col items-center justify-center bg-cream px-4">
-                <div className="text-center max-w-md">
-                    <h1 className="font-outfit font-bold text-3xl text-forest-900 mb-4">
-                        Conecta tu wallet 🌿
+            <div className="min-h-screen pt-24 pb-12 flex flex-col items-center justify-center bg-gradient-to-b from-white to-green-50/30 px-4">
+                <div className="bg-gradient-to-br from-green-50 via-white to-emerald-50/30 rounded-3xl border-2 border-green-100 p-12 text-center max-w-md w-full shadow-2xl shadow-green-500/10">
+                    <div className="text-5xl mb-6">🌿</div>
+                    <h1 className="font-outfit font-bold text-3xl text-gray-900 mb-3">
+                        Conecta tu wallet
                     </h1>
-                    <p className="text-gray-600 mb-8">
+                    <p className="text-gray-700 mb-8 leading-relaxed">
                         Para ver tu historial de impacto y certificados, necesitas conectar tu billetera.
                     </p>
                     <div className="flex justify-center">

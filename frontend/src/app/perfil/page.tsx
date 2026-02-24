@@ -38,17 +38,21 @@ export default function PerfilPage() {
         return (
             <>
                 <Navbar />
-                <div className="min-h-screen bg-cream pt-24 flex items-center justify-center">
-                <div className="bg-white rounded-3xl border border-forest-100 p-12 text-center max-w-md shadow-card">
-                    <Award className="w-12 h-12 text-forest-500 mx-auto mb-4" />
-                    <h1 className="font-outfit font-bold text-2xl text-charcoal mb-2">
+                <div className="min-h-screen bg-gradient-to-b from-white to-green-50/30 pt-24 flex items-center justify-center px-4">
+                <div className="bg-gradient-to-br from-green-50 via-white to-emerald-50/30 rounded-3xl border-2 border-green-100 p-12 text-center max-w-md w-full shadow-2xl shadow-green-500/10">
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30">
+                        <Award className="w-10 h-10 text-white" />
+                    </div>
+                    <h1 className="font-outfit font-bold text-3xl text-gray-900 mb-3">
                         Conecta tu wallet
                     </h1>
-                    <p className="text-charcoal/80 mb-8">
+                    <p className="text-gray-700 text-base mb-8 leading-relaxed">
                         Conecta tu wallet para ver tu perfil de miembro y tu historial de
                         participación.
                     </p>
-                    <ConnectButton label="Conectar Wallet" />
+                    <div className="flex justify-center">
+                        <ConnectButton label="Conectar Wallet" />
+                    </div>
                 </div>
             </div>
             <Footer />
