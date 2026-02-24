@@ -229,7 +229,7 @@ export default function AprenderPage() {
                             Únete a la comunidad
                         </h2>
                         <p className="text-forest-200/90 mb-8 max-w-md mx-auto text-sm">
-                            Únete a nuestro Telegram y solicita tu NFT de membresía. Es
+                            Entra a nuestro Telegram y solicita tu NFT de membresía. Es
                             gratuito y la comunidad te ayudará en cada paso.
                         </p>
                         <a
