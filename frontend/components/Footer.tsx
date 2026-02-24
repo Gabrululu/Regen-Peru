@@ -8,12 +8,12 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="md:col-span-2">
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-8 h-8 rounded-lg bg-forest-500 flex items-center justify-center">
-                                <Leaf className="w-4 h-4 text-white" />
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-9 h-9 rounded-xl bg-forest-600 flex items-center justify-center shadow-sm">
+                                <Leaf className="w-5 h-5 text-white" />
                             </div>
-                            <span className="font-outfit font-bold text-cream text-xl tracking-tight">
-                                Regen<span className="text-terra-400">.</span>Peru
+                            <span className="font-outfit font-bold text-slate-900 text-xl tracking-tight">
+                                Regen<span className="text-terra-600">.</span>Peru
                             </span>
                         </div>
                         <p className="text-sm leading-relaxed text-cream/60 max-w-xs">
