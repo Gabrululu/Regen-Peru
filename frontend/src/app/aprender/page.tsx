@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { ChevronDown, BookOpen, Wallet, Vote, Globe, HelpCircle, Sparkles } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const FAQ = [
     {
@@ -104,7 +106,9 @@ export default function AprenderPage() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
     return (
-        <div className="min-h-screen bg-cream pt-24 pb-16">
+        <>
+            <Navbar />
+            <div className="min-h-screen bg-cream pt-24 pb-16">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="mb-12 text-center">
@@ -240,5 +244,7 @@ export default function AprenderPage() {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 }

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { CTASection } from "@/components/sections/CTASection";
-
 import { RegenerationTools } from "@/components/sections/RegenerationTools";
 
 export const metadata: Metadata = {
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <Navbar transparent />
       <HeroSection />
       <StatsSection />
       <HowItWorksSection />
       <RegenerationTools />
       <FeaturedProjects />
       <CTASection />
+      <Footer />
     </>
   );
 }

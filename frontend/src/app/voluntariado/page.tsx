@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { ArrowRight, ExternalLink, MapPin, Clock, Users } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 // Mock data for Dework tasks
 const TASKS = [
@@ -45,7 +47,9 @@ const TASKS = [
 
 export default function VoluntariadoPage() {
     return (
-        <main className="min-h-screen pt-24 pb-20 bg-cream">
+        <>
+            <Navbar />
+            <main className="min-h-screen pt-24 pb-20 bg-cream">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
@@ -149,5 +153,7 @@ export default function VoluntariadoPage() {
                 </div>
             </div>
         </main>
+        <Footer />
+        </>
     );
 }

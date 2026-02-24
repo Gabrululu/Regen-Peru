@@ -50,9 +50,13 @@ const config: Config = {
                 cream: "#fafaf5",
                 charcoal: "#1a1a1a",
                 mist: "#f5f7f5",
+                primary: "#19e65e",
+                "background-light": "#f6f8f6",
+                "background-dark": "#112116",
             },
             fontFamily: {
-                outfit: ["Outfit", "sans-serif"],
+                outfit: ["Plus Jakarta Sans", "sans-serif"],
+                display: ["Plus Jakarta Sans", "sans-serif"],
                 inter: ["Inter", "sans-serif"],
             },
             animation: {

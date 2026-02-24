@@ -2,9 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, Sprout, Users, Vote } from "lucide-react";
 import gsap from "gsap";
-
 
 export function HeroSection() {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -25,7 +24,6 @@ export function HeroSection() {
                     y: 50,
                     opacity: 0,
                     duration: 1,
-                    stagger: 0.2, // Stagger words if split, but here entire block
                 }, "-=0.4")
                 .from(textRef.current, {
                     y: 30,
@@ -43,18 +41,22 @@ export function HeroSection() {
     }, []);
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-white py-20">
-            {/* Background Effects (Subtle High Key) */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,#f0faf0_0%,transparent_70%)]" />
-                <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle,#e8f5e8_0%,transparent_70%)] opacity-60" />
+        <section className="relative w-full min-h-screen overflow-hidden">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <div
+                    className="w-full h-full bg-cover bg-center bg-no-repeat transition-transform duration-[20s] ease-linear hover:scale-105"
+                    style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop")' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60" />
             </div>
 
-            <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center flex-grow justify-center">
+            {/* Hero Content */}
+            <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center max-w-5xl mx-auto pt-20 pb-32">
                 {/* Badge */}
-                <div ref={badgeRef} className="mb-6 md:mb-8 flex justify-center">
-                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-plant-50 border border-plant-200 text-xs font-bold uppercase tracking-wider text-plant-700">
-                        <span className="w-2 h-2 rounded-full bg-plant-500 animate-pulse" />
+                <div ref={badgeRef} className="mb-6 animate-fade-in-up">
+                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider text-primary">
+                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                         Únete a la causa
                     </span>
                 </div>
@@ -62,11 +64,10 @@ export function HeroSection() {
                 {/* Main Heading */}
                 <h1
                     ref={titleRef}
-                    className="font-outfit font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-forest-950 tracking-tight leading-[1.1] mb-6 md:mb-8"
+                    className="text-white text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1] mb-6 drop-shadow-lg font-display"
                 >
-                    Reforestando
-                    <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-plant-600 to-plant-400">
+                    Reforestando <br className="hidden md:block"/>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">
                         el Futuro
                     </span>
                 </h1>
@@ -74,67 +75,70 @@ export function HeroSection() {
                 {/* Subtitle */}
                 <p
                     ref={textRef}
-                    className="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed"
+                    className="text-white/80 text-lg md:text-xl font-light max-w-2xl mb-10 leading-relaxed"
                 >
-                    Únete a la comunidad que está sembrando vida en cada rincón del Perú.
-                    Restauramos ecosistemas con tecnología blockchain y acción local.
+                    Únete a la comunidad que está sembrando vida en cada rincón del planeta. Restauramos ecosistemas, un árbol a la vez.
                 </p>
 
                 {/* Buttons */}
-                <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 md:mb-20">
+                <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center gap-4">
                     <Link
-                        href="/propuestas"
-                        className="group relative flex h-14 items-center justify-center overflow-hidden rounded-full bg-plant-600 px-10 text-white font-bold text-base transition-all duration-300 hover:bg-plant-700 hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl shadow-plant-500/20"
+                        href="/voluntariado"
+                        className="group relative flex h-14 items-center justify-center overflow-hidden rounded-full bg-primary px-8 text-background-dark font-bold text-base transition-all duration-300 hover:bg-[#15c550] hover:scale-105 active:scale-95"
                     >
-                        <span className="relative z-10 mr-3">Votar Propuestas</span>
+                        <span className="relative z-10 mr-2">Únete como Voluntario</span>
                         <ArrowRight className="relative z-10 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </Link>
 
                     <Link
                         href="/aprender"
-                        className="flex h-14 items-center justify-center gap-3 rounded-full border-2 border-plant-100 bg-white px-10 text-plant-700 font-bold text-base transition-all hover:bg-plant-50 hover:border-plant-200 hover:text-plant-800"
+                        className="flex h-14 items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 backdrop-blur-sm px-8 text-white font-semibold text-base transition-all hover:bg-white/10 hover:border-white/50"
                     >
-                        <PlayCircle className="w-5 h-5 text-plant-600" />
+                        <PlayCircle className="w-5 h-5" />
                         Ver Video
                     </Link>
                 </div>
+            </div>
 
-                {/* Stats / Social Proof - Flow content instead of absolute */}
-                <div className="w-full max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                    <div className="px-8 py-6 rounded-2xl bg-white/80 backdrop-blur-xl border border-gray-100 shadow-2xl shadow-gray-200/50 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6">
-                        {/* Stat 1 */}
-                        <div className="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
-                            <div className="p-3 rounded-xl bg-plant-50 text-plant-600 shrink-0">
-                                <span className="text-2xl">🌳</span>
-                            </div>
-                            <div className="text-left">
-                                <p className="text-plant-900 text-2xl font-black leading-none">500+</p>
-                                <p className="text-gray-500 text-xs font-bold uppercase tracking-wide mt-1">Árboles Plantados</p>
-                            </div>
+            {/* Bottom Stats / Social Proof */}
+            <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-black/20 backdrop-blur-md">
+                <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                    {/* Stat 1 */}
+                    <div className="flex items-center gap-4">
+                        <div className="p-2 rounded-full bg-white/5 border border-white/10 text-primary">
+                            <Sprout className="w-6 h-6" />
                         </div>
-                        <div className="hidden md:block h-10 w-px bg-gray-200" />
-
-                        {/* Stat 2 */}
-                        <div className="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
-                            <div className="p-3 rounded-xl bg-plant-50 text-plant-600 shrink-0">
-                                <span className="text-2xl">👥</span>
-                            </div>
-                            <div className="text-left">
-                                <p className="text-plant-900 text-2xl font-black leading-none">127</p>
-                                <p className="text-gray-500 text-xs font-bold uppercase tracking-wide mt-1">Miembros Activos</p>
-                            </div>
+                        <div>
+                            <p className="text-white text-2xl font-bold leading-none">500+</p>
+                            <p className="text-white/60 text-xs uppercase tracking-wide">Árboles Plantados</p>
                         </div>
-                        <div className="hidden md:block h-10 w-px bg-gray-200" />
+                    </div>
 
-                        {/* Stat 3 */}
-                        <div className="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
-                            <div className="p-3 rounded-xl bg-plant-50 text-plant-600 shrink-0">
-                                <span className="text-2xl">🗳️</span>
-                            </div>
-                            <div className="text-left">
-                                <p className="text-plant-900 text-2xl font-black leading-none">8</p>
-                                <p className="text-gray-500 text-xs font-bold uppercase tracking-wide mt-1">Propuestas Votadas</p>
-                            </div>
+                    {/* Divider */}
+                    <div className="hidden md:flex h-8 w-px bg-white/10" />
+
+                    {/* Stat 2 */}
+                    <div className="flex items-center gap-4">
+                        <div className="p-2 rounded-full bg-white/5 border border-white/10 text-primary">
+                            <Users className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <p className="text-white text-2xl font-bold leading-none">127</p>
+                            <p className="text-white/60 text-xs uppercase tracking-wide">Voluntarios Activos</p>
+                        </div>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="hidden md:flex h-8 w-px bg-white/10" />
+
+                    {/* Stat 3 */}
+                    <div className="flex items-center gap-4">
+                        <div className="p-2 rounded-full bg-white/5 border border-white/10 text-primary">
+                            <Vote className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <p className="text-white text-2xl font-bold leading-none">8</p>
+                            <p className="text-white/60 text-xs uppercase tracking-wide">Propuestas Activas</p>
                         </div>
                     </div>
                 </div>

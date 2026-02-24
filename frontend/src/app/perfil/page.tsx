@@ -7,6 +7,8 @@ import { NFTCard } from "@/components/web3/NFTCard";
 import { CONTRACT_ADDRESSES, REGEN_NFT_ABI } from "@/lib/contracts";
 import { formatAddress } from "@/lib/utils";
 import { Vote, TrendingUp, Calendar, Award } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const MOCK_VOTE_HISTORY = [
     { proposalId: "1", title: "Reforestación en los Humedales de VMT", choice: "A favor", date: "15 Feb 2026" },
@@ -34,7 +36,9 @@ export default function PerfilPage() {
 
     if (!isConnected) {
         return (
-            <div className="min-h-screen bg-cream pt-24 flex items-center justify-center">
+            <>
+                <Navbar />
+                <div className="min-h-screen bg-cream pt-24 flex items-center justify-center">
                 <div className="bg-white rounded-3xl border border-forest-100 p-12 text-center max-w-md shadow-card">
                     <Award className="w-12 h-12 text-forest-500 mx-auto mb-4" />
                     <h1 className="font-outfit font-bold text-2xl text-charcoal mb-2">
@@ -47,11 +51,15 @@ export default function PerfilPage() {
                     <ConnectButton label="Conectar Wallet" />
                 </div>
             </div>
+            <Footer />
+            </>
         );
     }
 
     return (
-        <div className="min-h-screen bg-cream pt-24 pb-16">
+        <>
+            <Navbar />
+            <div className="min-h-screen bg-cream pt-24 pb-16">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Profile header */}
                 <div className="flex items-start gap-6 mb-10">
@@ -158,5 +166,7 @@ export default function PerfilPage() {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 }

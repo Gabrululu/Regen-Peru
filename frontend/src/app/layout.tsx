@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Web3Providers } from "../../components/Web3Providers";
-import { Navbar } from "../../components/Navbar";
-import { Footer } from "../../components/Footer";
 
 export const metadata: Metadata = {
   title: "Regen Peru DAO 🌿 | Impacto Social con Blockchain",
@@ -45,9 +43,7 @@ export default function RootLayout({
     <html lang="es-PE">
       <body>
         <Web3Providers>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          {children}
           <Toaster position="bottom-right" richColors closeButton theme="light" />
         </Web3Providers>
       </body>
