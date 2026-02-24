@@ -225,7 +225,7 @@ export default function AprenderPage() {
                     <div className="orb w-64 h-64 bg-forest-400 -top-16 -right-16" />
                     <div className="relative z-10">
                         <p className="text-forest-600 text-sm mb-2">¿Listo para empezar?</p>
-                        <h2 className="font-outfit font-bold text-3xl text-white mb-4">
+                        <h2 className="font-outfit font-bold text-3xl text-black mb-4">
                             Únete a la comunidad
                         </h2>
                         <p className="text-forest-200/90 mb-8 max-w-md mx-auto text-sm">
