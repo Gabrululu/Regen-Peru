@@ -130,7 +130,7 @@ export function Footer() {
 
                 <div className="mt-12 pt-6 border-t border-forest-800 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-cream/40">
-                        © 2025 Regen Peru DAO · Construido sobre{" "}
+                        © 2026 Regen Peru DAO · Construido sobre{" "}
                         <a
                             href="https://base.org"
                             target="_blank"
