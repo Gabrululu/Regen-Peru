@@ -9,10 +9,10 @@ export function Footer() {
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-9 h-9 rounded-xl bg-forest-600 flex items-center justify-center shadow-sm">
-                                <Leaf className="w-5 h-5 text-white" />
+                            <div className="w-10 h-10 rounded-xl border-2 border-forest-600 flex items-center justify-center bg-white shadow-sm">
+                                <Leaf className="w-6 h-6 text-forest-600" />
                             </div>
-                            <span className="font-outfit font-bold text-slate-900 text-xl tracking-tight">
+                            <span className="font-outfit font-bold text-slate-900 text-2xl tracking-tight">
                                 Regen<span className="text-terra-600">.</span>Peru
                             </span>
                         </div>
